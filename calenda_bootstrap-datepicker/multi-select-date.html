@@ -1,0 +1,27 @@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./layout.css">
+    
+    <div id="datepicker" data-date="Date()" onclick="calendar_update()">
+        <input type="hidden" id="my_hidden_input">
+    </div>
+    <div id="result"></div>
+    <button onclick="show()">Send</button><br>
+    <input type="hidden" id="my_hidden_input">
+        <input type="text" class="form-control date"/>
+
+<script src="./script.js"></script>
+<script>
+var multidate;
+function calendar_update(){
+    var x = document.getElementById("my_hidden_input").value;
+    document.getElementById("result").innerHTML = x;
+    multidate = x
+}
+function show(){
+    alert(multidate)
+}
+</script>
